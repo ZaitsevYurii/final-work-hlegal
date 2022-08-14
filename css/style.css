@@ -213,7 +213,7 @@ a {
 .team-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -234,7 +234,6 @@ a {
   overflow: hidden;
 }
 .team-content__link {
-  font-weight: 700;
   font-size: 14px;
   line-height: 17px;
   color: #24A3FF;
