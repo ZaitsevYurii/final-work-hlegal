@@ -1,0 +1,137 @@
+.team {
+   padding: 50px 0 60px 0;
+   background-color: #FFFFFF;
+}
+
+.team-container {
+   display: flex;
+   flex-direction: column;
+   padding-bottom: 30px;
+   border-radius: 12px;
+   overflow: hidden;
+
+}
+
+.team-leader-logo {
+   height: 500px;
+   @include bg-image-properites;
+   background-image: url("../images/team-leader-photo.png");
+   border-radius: 12px 12px 0 0;
+}
+
+.team-content {
+   padding: 30px;
+   background-color: #F5F5FA;
+   border-radius: 12px;
+   overflow: hidden;
+
+   &__link {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $titleColor;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 5px;
+   }
+
+   &__content {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 36px;
+      color: 0;
+      background: linear-gradient(to right, #F0145A, 20%, #EF8080);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+   }
+
+   &__team-leader-name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #B3B3BA;
+      margin-bottom: 6px;
+   }
+
+   &__team-leader-job {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #B3B3BA;
+      margin-bottom: 0;
+   }
+}
+
+.team-content__link:hover {
+   color: #F0145A;
+}
+
+.team-content__link .team-content__title::after {
+   content: url("../images/arrow2.png");
+   margin-left: 4px;
+}
+
+.team-content__link .team-content__title:hover::after {
+   content: url("../images/arrow2hover.png");
+}
+
+@media (min-width: 768px) {
+   .team-content__content {
+      font-size: 38px;
+      line-height: 46px;
+   }
+
+   .team-content {
+      border-radius: 0 0px 12px 12px;
+   }
+}
+
+@media (min-width: 1024px) {
+   .team-container {
+      flex-direction: row;
+   }
+
+   .team-leader-logo {
+      border-radius: 12px 0 0 12px;
+      min-width: 400px;
+      height: 528px;
+   }
+
+   .team-content {
+      border-radius: 0 12px 12px 0;
+   }
+}
+
+@media (min-width: 1440px) {
+   .team-leader-logo {
+      height: 344px;
+   }
+}
+
+@media (min-width: 1920px) {
+   .team-leader-logo {
+      height: 298px;
+   }
+}
+
+.slider {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+
+   &__btn {
+      height: 16px;
+      width: 16px;
+      background-color: #24A3FF;
+      border-radius: 50%;
+      border-style: none;
+      opacity: 0.2;
+   }
+}
+
+.slider__btn--active {
+   opacity: 1;
+}
