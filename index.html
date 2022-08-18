@@ -195,26 +195,22 @@
    </main> -->
 
 
-   <section class="form-container">
-      <div class="layer">
-         <form class="form" action="https://fom.in.ua/echo" method="post">
-            <div class="form-header">
-               <h2 class="form-header__title">We would like to help you</h2>
-            </div>
-            <div class="name-data">
-               <input id="name" type="text" name="name" placeholder="Name">
-               <textarea id="message" name="message" placeholder="Message"></textarea>
-            </div>
-            <div class="user-contacts">
-               <h3 class="user-contacts__title">How to answer you?</h3>
-               <input id="phone" type="tel" name="phone" placeholder="Phone number">
-               <input id="mail" type="email" name="mail" placeholder="Email">
-            </div>
-            <button class="btn__send" type="submit">Send message</button>
-            <button class="form-header__close" type="button"></button>
-         </form>
-      </div>
-   </section>
+   <div class="layer">
+      <form class="form" action="https://fom.in.ua/echo" method="post">
+         <h2 class="form__title">We would like to help you</h2>
+         <div class="name-data">
+            <input id="name" type="text" name="name" placeholder="Name">
+            <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
+         </div>
+         <div class="user-contacts">
+            <h3 class="user-contacts__title">How to answer you?</h3>
+            <input id="phone" type="tel" name="phone" placeholder="Phone number">
+            <input id="mail" type="email" name="mail" placeholder="Email">
+         </div>
+         <button class="btn__send" type="submit">Send message</button>
+         <button class="form__close" type="button"></button>
+      </form>
+   </div>
 
 
 </body>
