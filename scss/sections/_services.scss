@@ -1,26 +1,26 @@
-.services::before {
-   content: "";
-   background: #CACADB;
-   border-radius: 0px 0px 12px 12px;
-   position: absolute;
-   z-index: -1;
-   bottom: -10px;
-   height: 10px;
-   left: 20px;
-   right: 20px;
-}
+// .services::before {
+//    content: "";
+//    background: #CACADB;
+//    border-radius: 0px 0px 12px 12px;
+//    position: absolute;
+//    z-index: -1;
+//    bottom: -10px;
+//    height: 10px;
+//    left: 20px;
+//    right: 20px;
+// }
 
-.services::after {
-   content: "";
-   background: #E7E7F2;
-   border-radius: 0px 0px 12px 12px;
-   position: absolute;
-   z-index: -2;
-   bottom: -20px;
-   height: 20px;
-   left: 40px;
-   right: 40px;
-}
+// .services::after {
+//    content: "";
+//    background: #E7E7F2;
+//    border-radius: 0px 0px 12px 12px;
+//    position: absolute;
+//    z-index: -2;
+//    bottom: -20px;
+//    height: 20px;
+//    left: 40px;
+//    right: 40px;
+// }
 
 .services-link {
    color: $titleColor;
@@ -49,8 +49,6 @@
 
 
 .services {
-   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-   border-radius: 0px 0px 12px 12px;
    padding: 30px 0 60px 0;
    position: relative;
 }
