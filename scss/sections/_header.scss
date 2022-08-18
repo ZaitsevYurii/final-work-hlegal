@@ -66,35 +66,57 @@
    bottom: 30px;
 }
 
+
+
+
+
 .production {
    display: flex;
    flex-direction: column;
+
+   &__content {
+      padding: 30px;
+   }
+
+   &__content-title {
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+      margin-bottom: 30px;
+   }
+
+   &__content-text {
+      font-size: 19px;
+      line-height: 30px;
+      color: #FFFFFF;
+   }
 }
 
-.production__list {}
-
-.list-menu {
+.menu-items {
    display: flex;
    gap: 30px;
    overflow-x: auto;
    padding: 30px;
 }
 
-.list-menu__item {}
 
-.list-menu__link {
+.menu__link {
    font-weight: 700;
    font-size: 30px;
    line-height: 37px;
    color: #B3B3BA;
 }
 
-.list-menu__item:nth-child(1) {
+.menu__item:nth-child(1) {
    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
+.separator {
+   padding-right: 30px;
+   padding-left: 30px;
+}
 
 .separator::after {
    content: "";
@@ -104,25 +126,72 @@
    background: rgba(255, 255, 255, 0.3);
 }
 
-.separator {
-   padding-right: 30px;
-   padding-left: 30px;
+
+
+
+
+
+@media (min-width:768px) {
+
+   .symbol {
+      background-size: contain;
+   }
+
+   .menu-items {
+      padding: 60px;
+   }
+
+   .separator {
+      padding-right: 60px;
+      padding-left: 60px;
+   }
+
+   .production__content {
+      padding: 60px;
+   }
+
+   .production__content-title {
+      font-size: 30px;
+      line-height: 37px;
+   }
+
 }
 
-.production__content {
-   padding: 30px;
-}
+@media (min-width: 1024px) {
+   .production {
+      display: flex;
+      gap: 60px;
+      flex-direction: row;
+      padding: 60px;
 
-.production__content-title {
-   font-size: 20px;
-   line-height: 24px;
-   color: #FFFFFF;
-   margin-bottom: 30px;
-}
+      &__content {
+         padding: 0;
+      }
+   }
 
-.production__content-text {
-   font-size: 19px;
-   line-height: 30px;
-   color: #FFFFFF;
+   .menu-items {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      align-items: flex-end;
+      padding: 0;
+   }
+
+   .separator {
+      
+   }
+   //    padding-right: 0;
+   //    padding-left: 0;
+   //    padding-top: 60px;
+   //    padding-bottom: 60px;
+   // }
+
+   .separator::after {
+      content: "";
+      width: 4px;
+      height: 100%;
+   }
+
 
 }
