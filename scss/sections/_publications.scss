@@ -122,7 +122,7 @@
    }
 
    .publications-card:nth-child(3) {
-      width: calc(50% - 15px);
+      width: 100%;
    }
 }
 
@@ -132,15 +132,15 @@
       flex-wrap: nowrap;
    }
 
-   .publications-card.first {
+   .publications-card:nth-child(1) {
       width: calc(33.33% - 15px);
    }
 
-   .publications-card.second {
+   .publications-card:nth-child(2) {
       width: calc(33.33% - 15px);
    }
 
-   .publications-card.third {
+   .publications-card:nth-child(3) {
       width: calc(33.33% - 15px);
    }
 }

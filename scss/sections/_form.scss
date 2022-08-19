@@ -1,6 +1,6 @@
 .layer {
-   display: block;
-   background: rgb(50, 50, 100, 0.7) ;
+   display: none;
+   background: rgb(50, 50, 100, 0.7);
    position: fixed;
    top: 0;
    right: 0;
@@ -132,9 +132,7 @@ textarea:invalid {
 
 .form__close {
    background-image: url(../images/close.svg);
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
+   @include bg-image-properites;
    background-color: transparent;
    border: none;
    width: 32px;
@@ -155,7 +153,6 @@ textarea:invalid {
       border-radius: 12px;
    }
 }
-
 
 @media (min-width: 768px) {
    .form__title {

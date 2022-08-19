@@ -212,9 +212,9 @@ a {
 
 .symbol {
   background-image: url(../images/Symbol.svg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
   padding: 30px 0;
   display: flex;
@@ -236,8 +236,9 @@ a {
   min-height: 42px;
   background-color: none;
   background-image: url(../images/symbol-vector.svg);
-  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-size: 18px 9px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
@@ -255,8 +256,7 @@ a {
   flex-direction: column;
 }
 .production__content {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 0;
 }
 .production__content-title {
   font-size: 20px;
@@ -331,7 +331,7 @@ a {
   .production__content {
     padding: 0;
   }
-  .production .separator {
+  .separator {
     border-right: 4px solid rgba(255, 255, 255, 0.3);
     min-height: 303px;
   }
@@ -667,25 +667,25 @@ a {
     width: calc(50% - 15px);
   }
   .publications-card:nth-child(3) {
-    width: calc(50% - 15px);
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .publications-cards {
     flex-wrap: nowrap;
   }
-  .publications-card.first {
+  .publications-card:nth-child(1) {
     width: calc(33.33% - 15px);
   }
-  .publications-card.second {
+  .publications-card:nth-child(2) {
     width: calc(33.33% - 15px);
   }
-  .publications-card.third {
+  .publications-card:nth-child(3) {
     width: calc(33.33% - 15px);
   }
 }
 .layer {
-  display: block;
+  display: none;
   background: rgba(50, 50, 100, 0.7);
   position: fixed;
   top: 0;
@@ -812,9 +812,9 @@ textarea:invalid {
 
 .form__close {
   background-image: url(../images/close.svg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   width: 32px;
