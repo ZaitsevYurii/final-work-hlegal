@@ -1,7 +1,6 @@
 .layer {
-   display: none;
-   background: #323264;
-   opacity: 0.7;
+   display: block;
+   background: rgb(50, 50, 100, 0.7) ;
    position: fixed;
    top: 0;
    right: 0;
@@ -147,7 +146,7 @@ textarea:invalid {
 }
 
 .form__close:hover {
-   background: #E6E6F0;
+   background-color: #E6E6F0;
    border-radius: 8px;
 }
 

@@ -4,6 +4,7 @@
    position: relative;
 }
 
+
 .symbol {
    background-image: url(../images/Symbol.svg);
    background-repeat: no-repeat;
@@ -102,9 +103,7 @@
 }
 
 .separator {
-   background: rgba(255, 255, 255, 0.3);
-   min-width: 315px;
-   height: 4px;
+   border-bottom: 4px solid rgba(255, 255, 255, 0.3);
 }
 
 
@@ -134,16 +133,22 @@
 }
 
 @media (min-width: 1024px) {
+
    .production {
       display: flex;
       gap: 60px;
       flex-direction: row;
       padding: 60px 0;
       align-items: center;
-      justify-content: space-between;
 
       &__content {
          padding: 0;
+      }
+
+      .separator {
+         // border-bottom: none;
+         border-right: 4px solid rgba(255, 255, 255, 0.3);
+         min-height: 303px;
       }
    }
 
@@ -155,17 +160,4 @@
       align-items: flex-end;
       padding: 0;
    }
-
-   .separator {
-      transform: rotate(90deg);
-      // margin: 0 -150px;
-   }
-
-   .separator::after {
-      content: "";
-      width: 4px;
-      height: 100%;
-   }
-
-
 }
