@@ -19,7 +19,6 @@
 .wrapper {
   padding-left: 30px;
   padding-right: 30px;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -36,6 +35,10 @@
   }
 }
 @media (min-width: 1920px) {
+  .wrapper {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
   .secondary-wrapper {
     padding: 0;
     width: 1600px;
@@ -77,6 +80,30 @@ a {
 ul {
   list-style: none;
   margin: 0;
+}
+
+.services::before {
+  content: "";
+  background: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: -10px;
+  height: 10px;
+  left: 20px;
+  right: 20px;
+}
+
+.services::after {
+  content: "";
+  background: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+  position: absolute;
+  z-index: 0;
+  bottom: -20px;
+  height: 20px;
+  left: 40px;
+  right: 40px;
 }
 
 .services-link {
@@ -176,16 +203,10 @@ ul {
     padding-left: 60px;
     padding-right: 60px;
   }
-  .main-blocks .main-block {
-    width: 400px;
-  }
 }
 @media (min-width: 1920px) {
   .wrapper {
     width: 1600px;
-  }
-  .main-blocks .main-block {
-    width: 493px;
   }
 }
 .header {
@@ -200,15 +221,13 @@ ul {
   background-position: center;
   background-size: cover;
   min-height: 100vh;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-
 .symbol__title {
   font-weight: 700;
   font-size: 38px;
@@ -216,7 +235,6 @@ ul {
   text-align: center;
   color: #FFFFFF;
 }
-
 .symbol__link {
   display: block;
   min-width: 42px;
@@ -231,13 +249,19 @@ ul {
   position: absolute;
   bottom: 30px;
 }
+.symbol__link:hover {
+  background-image: url(../images/vector-hover.svg);
+  opacity: 0.5;
+  border: 2px solid #F0145A;
+}
 
 .production {
   display: flex;
   flex-direction: column;
 }
 .production__content {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .production__content-title {
   font-size: 20px;
@@ -258,6 +282,10 @@ ul {
   padding: 30px;
 }
 
+.menu__item {
+  white-space: nowrap;
+}
+
 .menu__link {
   font-weight: 700;
   font-size: 30px;
@@ -265,23 +293,23 @@ ul {
   color: #B3B3BA;
 }
 
+.menu__link:hover {
+  color: #F0145A;
+}
+
 .menu__item:nth-child(1) {
   background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
 }
 
 .separator {
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
-.separator::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
   background: rgba(255, 255, 255, 0.3);
+  min-width: 315px;
+  height: 4px;
 }
 
 @media (min-width: 768px) {
@@ -291,12 +319,8 @@ ul {
   .menu-items {
     padding: 60px;
   }
-  .separator {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
   .production__content {
-    padding: 60px;
+    padding: 60px 0;
   }
   .production__content-title {
     font-size: 30px;
@@ -308,7 +332,9 @@ ul {
     display: flex;
     gap: 60px;
     flex-direction: row;
-    padding: 60px;
+    padding: 60px 0;
+    align-items: center;
+    justify-content: space-between;
   }
   .production__content {
     padding: 0;
@@ -320,6 +346,9 @@ ul {
     flex-shrink: 0;
     align-items: flex-end;
     padding: 0;
+  }
+  .separator {
+    transform: rotate(90deg);
   }
   .separator::after {
     content: "";
@@ -419,20 +448,10 @@ ul {
   .team-leader-logo {
     border-radius: 12px 0 0 12px;
     min-width: 400px;
-    height: 528px;
+    height: auto;
   }
   .team-content {
     border-radius: 0 12px 12px 0;
-  }
-}
-@media (min-width: 1440px) {
-  .team-leader-logo {
-    height: 344px;
-  }
-}
-@media (min-width: 1920px) {
-  .team-leader-logo {
-    height: 298px;
   }
 }
 .slider {
@@ -653,14 +672,14 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .publications-card.first {
+  .publications-card:nth-child(1) {
     width: calc(50% - 15px);
   }
-  .publications-card.second {
+  .publications-card:nth-child(2) {
     width: calc(50% - 15px);
   }
-  .publications-card.third {
-    width: 100%;
+  .publications-card:nth-child(3) {
+    width: calc(50% - 15px);
   }
 }
 @media (min-width: 1024px) {

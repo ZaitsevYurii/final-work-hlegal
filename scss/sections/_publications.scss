@@ -113,16 +113,16 @@
       flex-wrap: wrap;
    }
 
-   .publications-card.first {
+   .publications-card:nth-child(1) {
       width: calc(50% - 15px);
    }
 
-   .publications-card.second {
+   .publications-card:nth-child(2) {
       width: calc(50% - 15px);
    }
 
-   .publications-card.third {
-      width: 100%;
+   .publications-card:nth-child(3) {
+      width: calc(50% - 15px);
    }
 }
 

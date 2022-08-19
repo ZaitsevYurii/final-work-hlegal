@@ -96,23 +96,11 @@
    .team-leader-logo {
       border-radius: 12px 0 0 12px;
       min-width: 400px;
-      height: 528px;
+      height: auto;
    }
 
    .team-content {
       border-radius: 0 12px 12px 0;
-   }
-}
-
-@media (min-width: 1440px) {
-   .team-leader-logo {
-      height: 344px;
-   }
-}
-
-@media (min-width: 1920px) {
-   .team-leader-logo {
-      height: 298px;
    }
 }
 
