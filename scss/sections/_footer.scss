@@ -1,0 +1,116 @@
+.footer {
+
+   background: #F5F5FA;
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      padding-bottom: 30px;
+   }
+
+   &__line {
+      background: #E6E6F0;
+      height: 2px;
+   }
+
+   &__adress {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+   }
+
+   &__street {
+      line-height: 20px;
+      color: #323264;
+   }
+
+   .company {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+      color: #B3B3BA;
+   }
+}
+
+.adress {
+
+   &__link-map {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #24A3FF;
+   }
+
+   &__container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+   }
+}
+
+.footer__contacts {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: center;
+}
+
+.contacts__tel {
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px;
+   text-align: right;
+   color: #46466E;
+}
+
+.contacts__mail {
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px;
+   color: #24A3FF;
+}
+
+
+@media (min-width:1024px) {
+
+   .footer__inner {
+      position: relative;
+   }
+
+   .footer__adress {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .footer__contacts {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 10px;
+   }
+
+   .adress__container {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+   }
+
+   .coma {
+      width: 6px;
+      height: 6px;
+      background: #B3B3BA;
+      border-radius: 50%;
+   }
+
+   .company {
+      position: absolute;
+      right: 0;
+      top: 30px;
+   }
+}
