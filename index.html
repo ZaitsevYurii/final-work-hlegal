@@ -45,7 +45,7 @@
                         <li class="nav__item"><a href="#" class="nav__link">publications</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
                      </ul>
-                     <button id="open-mobile-menu" class="btn-mobile-menu" type="menu">
+                     <button id="open-mobile-menu" class="btn-mobile-menu" type="button">
                         <img src="../images/Hamburger.svg" alt="menu logo mobile">
                      </button>
                   </nav>
@@ -56,7 +56,7 @@
             <div class="wrapper">
                <h1 class="symbol__title">you legal solutions provider</h1>
             </div>
-            <a href="#" class="symbol__link"></a>
+            <a id="open-popup" href="#" class="symbol__link"></a>
          </div>
       </div>
       <div class="production-wrapper">
@@ -145,8 +145,6 @@
          </div>
       </section>
    </header>
-
-
 
    <main class="main">
       <section class="team">
@@ -297,7 +295,6 @@
       </div>
    </footer>
 
-
    <div class="layer">
       <form class="form" action="https://fom.in.ua/echo" method="post">
          <h2 class="form__title">We would like to help you</h2>
@@ -311,34 +308,46 @@
             <input id="mail" type="email" name="mail" placeholder="Email">
          </div>
          <button class="btn__send" type="submit">Send message</button>
-         <button class="form__close" type="button"></button>
+         <button id="close-popup" class="form__close" type="button"></button>
       </form>
    </div>
 
-   <div class="mobile-menu-container menu-active">
+   <div class="mobile-menu-container">
       <div class="menu-burger">
-         <div class="menu-burger__list">
+         <nav class="menu-burger__list">
             <a href="#" class="menu-butger__item">about us</a>
             <a href="#" class="menu-butger__item">послуги</a>
             <a href="#" class="menu-butger__item">команда</a>
             <a href="#" class="menu-butger__item">публікації</a>
             <a href="#" class="menu-butger__item">контакти</a>
-         </div>
+         </nav>
          <button id="close-mobile-menu" class="menu-burger__list-close-btn" type="button"></button>
       </div>
    </div>
 
    <script>
-      const navigation = document.querySelector('.menu-burger');
-      const menuButton = document.querySelector('#open-mobile-menu');
-      const crossButton = document.querySelector('#close-mobile-menu');
+      const mobileMenu = document.querySelector('.mobile-menu-container')
+      const openMenuButton = document.querySelector('#open-mobile-menu')
+      const closeMenuButton = document.querySelector('#close-mobile-menu')
 
-      menuButton.addEventListener('click', () => {
-         navigation.classList.add('menu-active')
+      openMenuButton.addEventListener('click', () => {
+         mobileMenu.classList.add('menu--active')
       })
 
-      crossButton.addEventListener('click', () => {
-         navigation.classList.remove('menu-active')
+      closeMenuButton.addEventListener('click', () => {
+         mobileMenu.classList.remove('menu--active')
+      })
+
+      const form = document.querySelector('.layer')
+      const openForm = document.querySelector('#open-popup')
+      const closeForm = document.querySelector('#close-popup')
+
+      openForm.addEventListener('click', () => {
+         form.classList.add('layer--active')
+      })
+
+      closeForm.addEventListener('click', () => {
+         form.classList.remove('layer--active')
       })
    </script>
 

@@ -148,6 +148,10 @@ textarea:invalid {
    border-radius: 8px;
 }
 
+.layer--active {
+   display: block;
+}
+
 @media (min-width: 376px) {
    .form {
       border-radius: 12px;

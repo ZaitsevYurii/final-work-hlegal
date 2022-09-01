@@ -95,7 +95,12 @@
 }
 
 .nav__link:hover {
+   border-bottom: 2px solid #FFFFFF;
+}
+
+.nav__link:active {
    color: $hoverColor;
+   border-bottom: 2px solid $hoverColor;
 }
 
 .btn-mobile-menu {
@@ -103,8 +108,13 @@
    background-color: transparent;
 }
 
+.btn-mobile-menu:hover {
+   background: rgba(245, 245, 250, 0.2);
+   border-radius: 8px;
+}
 
-.menu-active {
+
+.mobile-menu-container.menu--active {
    display: block;
 }
 
@@ -323,9 +333,9 @@
       color: $textColor;
    }
 
-   &__wrapper{
-         margin-left: auto;
-         margin-right: auto;
+   &__wrapper {
+      margin-left: auto;
+      margin-right: auto;
    }
 }
 
