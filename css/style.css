@@ -577,9 +577,6 @@ ul {
   .production__content {
     padding: 60px;
   }
-  .menu-items {
-    padding: 60px;
-  }
 }
 @media (min-width: 1024px) {
   .production {
